@@ -1,60 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="ui-mobile-rendering">
 <head>
+    <title></title>
     <meta charset="utf-8">
-    <title>Backbone Cellar</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css"/>
 
-    <style>
-        body {
-            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-        }
-    </style>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/docs.css" rel="stylesheet">
+    <!-- The Templates -->
+    <script type="text/template" id="home">
+
+        <div data-role="header">
+            <h1>Nandotecno Solutions</h1>
+        </div>
+
+        <div data-role="content">
+            <h3>Procedimentos para realização do seu atendimento ou serviço.</h3>
+            <p>Escolha o tipo de serviço que busca atendimento.</p>
+            <p>Faça o cadastro com as informações básicas</p>
+            <p>Faça uma descrição da situação ou serviço que deseja realizar.</p>
+            
+             <h3>A opção ideal para sua situação.</h3>
+             <p>Através de profissionais habilitados sua necessidade será atendida diante da atuação rápida de uma equipe especializada para sua necessidade.</p>
+             <h3>Escolha aqui o seguimento que deseja buscar a solução.</h3>
+            <ul data-role="listview"  data-inset="true">
+                        
+             <li><a href="#page1">Serviços Contábeis</a></li>
+             <li><a href="#page2">Serviços Jurídicos</a></li>
+             <li><a href="#page3">Serviços de Internet / Web</a></li>
+                
+            </ul>
+        </div>
+
+    </script>
+
+    <script type="text/template" id="page1">
+
+        <div data-role="header">
+            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
+            <h1>Serviços Contábeis</h1>
+        </div>
+
+        <div data-role="content">
+            <p>Serviços contábeis, como abertura de MEI, encerramento de CNPJ, atualização de cadastro e situação de pagamentos de impostos.</p>
+            <h2>Tipos de serviços</h2>
+                        <p> - Prestação de serviços de contabilidade.</p>          
+                        <p> - Prestação de serviços juridicos.</P> 
+                        <p> - Prestção de serviços digitais.</p>          
+                        <p> - Prestação de serviços web.</P> 
+            <ul data-role="listview" data-inset="true">
+            
+                <li><a href="http://nandotecno.rf.gd/">Formulário de Serviço</a></li>
+             </ul>
+        </div>
+
+    </script>
+
+    <script type="text/template" id="page2">
+
+        <div data-role="header">
+            <a href="http://nandotecno.epizy.com/" target="_blank" data-icon="back" class="back ui-btn-left">Back</a>
+            <h1>Serviços Jurídicos</h1>
+        </div>
+
+        <div data-role="content">
+            <p>Serviços Juridicos trabalhistas, </p>
+            <h2>Tipos de Serviços</h2>
+                        <p> - Prestação de serviços de contabilidade.</p>          
+                        <p> - Prestação de serviços juridicos.</P> 
+                        <p> - Prestção de serviços digitais.</p>          
+                        <p> - Prestação de serviços web.</P> 
+            <ul data-role="listview" data-inset="true">
+                <li><a href="http://nandotecno.rf.gd/" target="_blank">Formulário de Serviços</a></li>
+                  
+            </ul>
+        </div>
+
+    </script>
+    
+    <script src="lib/jquery-1.7.1.min.js"></script>
+    <script src="js/jqm-config.js"></script>
+    <script src="lib/jquery.mobile-1.0.1.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/backbone-min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
-<body data-spy="scroll" data-target=".subnav" data-offset="50">
+<body></body>
 
-<div class="header"></div>
-
-<div class="container">
-    <div class="row">
-        <div id="content" class="span12>"></div>
-    </div>
-
-    <footer class="footer">
-        <p class="pull-right"><a href="#">Back Home</a></p>
-
-        <p>Built as a sample application with <a href="http://documentcloud.github.com/backbone/" target="_blank">Backbone.js</a>
-            and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> by <a
-                    href="http://coenraets.org" target="_blank">Christophe Coenraets</a>.</p>
-
-        <p>The source code for this application is available in <a href="#">this repository</a> on GitHub.</p>
-    </footer>
-
-</div>
-
-<script src="lib/jquery-1.7.2.min.js"></script>
-<script src="lib/underscore-min.js"></script>
-<script src="lib/backbone-min.js"></script>
-<script src="lib/bootstrap.js"></script>
-
-<!-- NOTE: memorystore.js will set up an in-memory datastore to allow you to experience the app without setting up
-back-end infrastructure. All the changes you make to the data will be lost the next time you access the app or hit Refresh.
-To use the app with a persistent RESTful back-end (provided in the GitHub repo), simply comment out the line below. -->
-<script src="js/memorystore.js"></script>
-
-<script src="js/utils.js"></script>
-<script src="js/models/models.js"></script>
-<script src="js/views/paginator.js"></script>
-<script src="js/views/header.js"></script>
-<script src="js/views/winelist.js"></script>
-<script src="js/views/winedetails.js"></script>
-<script src="js/views/about.js"></script>
-<script src="js/main.js"></script>
-
-</body>
 </html>
